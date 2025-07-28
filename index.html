@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="VinFix411 – Vehicle Lookup Help" />
-  <meta property="og:description" content="We look up the hard stuff — from everyday vehicles to heavy equipment. Common issues, specs, fluid types, and real-world troubleshooting — with direct links to specific issues when needed — sent straight to you." />
-  <meta property="og:image" content="https://vinfix411.com/64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vinfix411.com/" />
   <title>VinFix411</title>
+
+  <meta property="og:title" content="VinFix411 – Vehicle Lookup Help" />
+  <meta property="og:description" content="We look up the hard stuff — from everyday vehicles to heavy equipment. Common issues, specs, fluid types, and real-world troubleshooting — sent straight to you." />
+  <meta property="og:image" content="https://vinfix411.com/64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" />
+  <meta property="og:url" content="https://vinfix411.com/" />
+  <meta property="og:type" content="website" />
   <link rel="robots" href="robots.txt" />
+
   <style>
     * {
       margin: 0;
@@ -34,7 +36,7 @@
     }
     .overlay-text {
       position: absolute;
-      top: 6%;
+      top: 5%;
       left: 50%;
       transform: translateX(-50%);
       text-align: center;
@@ -53,19 +55,19 @@
       margin-top: 1rem;
       max-width: 800px;
     }
-    .overlay-text .button {
-      margin-top: 1.5rem;
+    .overlay-text a.button {
       display: inline-block;
-      background-color: #444;
-      color: white;
+      margin-top: 1.5rem;
+      padding: 0.7rem 1.4rem;
+      background-color: #00b3ff;
+      color: #fff;
       text-decoration: none;
-      padding: 0.6rem 1.2rem;
       border-radius: 6px;
       font-weight: bold;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
-    .overlay-text .button:hover {
-      background-color: #666;
+    .overlay-text a.button:hover {
+      background-color: #0093cc;
     }
     @media (max-width: 768px) {
       .overlay-text h1 {
@@ -73,6 +75,10 @@
       }
       .overlay-text p {
         font-size: 1rem;
+      }
+      .overlay-text a.button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
       }
     }
   </style>
@@ -83,11 +89,8 @@
     <div class="overlay-text">
       <h1><span>Vin</span>Fix411</h1>
       <p><strong>We look up the hard stuff — from everyday vehicles to heavy equipment.</strong><br>
-        Common issues, specs, fluid types, and real-world troubleshooting — with direct links to specific issues when needed — sent straight to you.
-      </p>
-      <a href="#services" class="button">Explore Services</a>
-      <a href="#contact" class="button" style="margin-left: 10px;">Contact</a>
-      <a href="#parts" class="button" style="margin-left: 10px;">Parts Locator</a>
+      Common issues, specs, fluid types, and real-world troubleshooting — with direct links to specific issues when needed — sent straight to you.</p>
+      <a href="#" class="button">Explore Services</a>
     </div>
   </div>
 </body>
