@@ -18,6 +18,37 @@
       font-family: Arial, sans-serif;
       background-color: #000;
       color: #fff;
+      padding-top: 60px; /* space for fixed header */
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #111;
+      color: #fff;
+      z-index: 1000;
+      border-bottom: 1px solid #333;
+    }
+    header nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+    header nav div {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+    }
+    header nav a:hover {
+      text-decoration: underline;
     }
     .hero {
       position: relative;
@@ -98,6 +129,18 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <nav>
+      <div>VINFix411</div>
+      <div>
+        <a href="/">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
   <div class="hero">
     <img src="64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" alt="Engine Drawing with Brown Background" />
     <div class="overlay-text">
@@ -116,7 +159,7 @@
     </p>
   </div>
 
-  <div class="section">
+  <div class="section" id="contact">
     <h2>Contact</h2>
     <p>
       Got a VIN or Year/Make/Model? Send it our way and we’ll do the rest.<br>
@@ -130,4 +173,6 @@
       Can’t find what you need? We’ll dig up listings, sources, or matching replacements from verified sellers — eBay, salvage yards, specialty vendors — whatever it takes to help you locate the right part.
     </p>
   </div>
+
 </body>
+</html>
