@@ -12,7 +12,7 @@
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family: Arial, sans-serif; background:#000; color:#fff; }
 
-    /* Header (bigger, in-flow) */
+    /* Header */
     header { background:#111; border-bottom:1px solid #333; }
     .nav {
       max-width:1200px; margin:0 auto;
@@ -22,16 +22,29 @@
     .brand {
       font-size:2rem; font-weight:700; line-height:1;
       text-decoration:none; color:#fff;
-      /* exact casing is important; no transforms */
     }
     .links a {
       color:#fff; text-decoration:none; margin-left:1.25rem; font-size:1rem;
     }
     .links a:hover { text-decoration:underline; }
 
-    /* Hero (no overlay anywhere) */
-    .hero { width:100%; max-width:1200px; margin:0 auto; }
+    /* Hero */
+    .hero { position:relative; width:100%; max-width:1200px; margin:0 auto; }
     .hero img { width:100%; height:auto; display:block; }
+
+    /* Overlay text at top of image */
+    .hero-top-text {
+      position:absolute;
+      top:3%;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:3rem;
+      font-weight:900;
+      color:#fff;
+      text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+      text-align:center;
+      white-space:nowrap;
+    }
 
     .headline {
       text-align:center; padding:1.25rem;
@@ -51,6 +64,7 @@
     @media (max-width: 768px) {
       .brand { font-size:1.75rem; }
       .links a { margin-left:0.9rem; font-size:0.95rem; }
+      .hero-top-text { font-size:2rem; top:5%; }
       .headline h1 { font-size:2rem; }
       .headline p { font-size:1rem; }
     }
@@ -71,6 +85,7 @@
 
   <div class="hero">
     <img src="64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" alt="Engine Drawing with Brown Background" />
+    <div class="hero-top-text">VinFix411.com</div>
   </div>
 
   <div class="headline">
