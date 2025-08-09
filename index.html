@@ -3,153 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="VinFix411 – Vehicle Lookup Help" />
+  <meta property="og:title" content="VinFix411.com – Vehicle Lookup Help" />
   <meta property="og:description" content="Common issues, specs, fluid types, and real-world troubleshooting — sent straight to you." />
   <meta property="og:image" content="https://vinfix411.netlify.app/64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" />
   <meta property="og:type" content="website" />
-  <title>VinFix411</title>
+  <title>VinFix411.com</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial, sans-serif; background:#000; color:#fff; }
+
+    /* Header (bigger, in-flow) */
+    header { background:#111; border-bottom:1px solid #333; }
+    .nav {
+      max-width:1200px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:1rem 1.25rem;
     }
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      padding-top: 60px; /* space for fixed header */
+    .brand {
+      font-size:2rem; font-weight:700; line-height:1;
+      text-decoration:none; color:#fff;
+      /* exact casing is important; no transforms */
     }
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #111;
-      color: #fff;
-      z-index: 1000;
-      border-bottom: 1px solid #333;
+    .links a {
+      color:#fff; text-decoration:none; margin-left:1.25rem; font-size:1rem;
     }
-    header nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
+    .links a:hover { text-decoration:underline; }
+
+    /* Hero (no overlay anywhere) */
+    .hero { width:100%; max-width:1200px; margin:0 auto; }
+    .hero img { width:100%; height:auto; display:block; }
+
+    .headline {
+      text-align:center; padding:1.25rem;
+      text-shadow:1px 1px 4px #000;
     }
-    header nav div {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-    header nav a {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .hero img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .overlay-text {
-      position: absolute;
-      top: 5.5%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      color: #fff;
-      text-shadow: 1px 1px 4px #000;
-      padding: 0 1rem;
-    }
-    .overlay-text h1 {
-      font-size: 3rem;
-    }
-    .overlay-text h1 span {
-      color: #00b3ff;
-    }
-    .overlay-text p {
-      font-size: 1.2rem;
-      margin-top: 1rem;
-      max-width: 800px;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-      transition: background-color 0.3s;
-    }
-    .cta-button:hover {
-      background-color: #666;
-    }
+    .headline h1 { font-size:3rem; font-weight:700; }
+    .headline p { font-size:1.2rem; margin-top:0.75rem; line-height:1.5; max-width:900px; margin-left:auto; margin-right:auto; }
+
+    /* Sections */
+    .section { padding:2rem 1rem; text-align:center; background:#111; }
+    .section + .section { border-top:1px solid #222; }
+    .section h2 { font-size:2rem; margin-bottom:1rem; }
+    .section p { max-width:800px; margin:0 auto; line-height:1.6; }
+    .contact a { color:#9fd3ff; text-decoration:none; }
+
+    /* Mobile tweaks */
     @media (max-width: 768px) {
-      .overlay-text h1 {
-        font-size: 2rem;
-      }
-      .overlay-text p {
-        font-size: 1rem;
-      }
-    }
-    .section {
-      padding: 2rem;
-      text-align: center;
-      background-color: #111;
-    }
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .section p {
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.6;
-    }
-    .contact {
-      background-color: #000;
-    }
-    .contact a {
-      color: #00b3ff;
-      text-decoration: none;
+      .brand { font-size:1.75rem; }
+      .links a { margin-left:0.9rem; font-size:0.95rem; }
+      .headline h1 { font-size:2rem; }
+      .headline p { font-size:1rem; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <nav>
-      <div>VINFix411</div>
-      <div>
+    <div class="nav">
+      <a class="brand" href="/">VinFix411.com</a>
+      <div class="links">
         <a href="/">Home</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
       </div>
-    </nav>
+    </div>
   </header>
 
   <div class="hero">
     <img src="64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" alt="Engine Drawing with Brown Background" />
-    <div class="overlay-text">
-      <h1><span>Vin</span>Fix411</h1>
-      <p><strong>We look up the hard stuff — from everyday vehicles to heavy equipment.</strong><br>
-        Common issues, specs, fluid types, and real-world troubleshooting — with direct links to specific issues when needed — sent straight to you.
-      </p>
-      <a href="#services" class="cta-button">Explore Services</a>
-    </div>
+  </div>
+
+  <div class="headline">
+    <h1>VinFix411</h1>
+    <p><strong>We look up the hard stuff — from everyday vehicles to heavy equipment.</strong><br>
+      Common issues, specs, fluid types, and real-world troubleshooting — with direct links to specific issues when needed — sent straight to you.
+    </p>
   </div>
 
   <div class="section" id="services">
@@ -163,6 +91,7 @@
     <h2>Contact</h2>
     <p>
       Got a VIN or Year/Make/Model? Send it our way and we’ll do the rest.<br>
+      <strong>Website:</strong> VinFix411.com<br>
       <strong>Email:</strong> vinfix.lookup@gmail.com
     </p>
   </div>
