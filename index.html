@@ -38,12 +38,20 @@
       top:3%;
       left:50%;
       transform:translateX(-50%);
-      font-size:3.8rem; /* bigger */
-      font-weight:900;
-      color:#000; /* black text */
-      text-shadow:1px 1px 2px rgba(255,255,255,0.6); /* subtle light outline */
       text-align:center;
+      color:#000;
+      text-shadow:1px 1px 2px rgba(255,255,255,0.6);
       white-space:nowrap;
+    }
+    .hero-top-text .site-name {
+      font-size:3.8rem;
+      font-weight:900;
+    }
+    .hero-top-text .email {
+      font-size:1.5rem;
+      font-weight:600;
+      margin-top:0.3rem;
+      display:block;
     }
 
     .headline {
@@ -64,7 +72,8 @@
     @media (max-width: 768px) {
       .brand { font-size:1.75rem; }
       .links a { margin-left:0.9rem; font-size:0.95rem; }
-      .hero-top-text { font-size:2.5rem; top:5%; }
+      .hero-top-text .site-name { font-size:2.5rem; }
+      .hero-top-text .email { font-size:1.1rem; }
       .headline h1 { font-size:2rem; }
       .headline p { font-size:1rem; }
     }
@@ -85,7 +94,10 @@
 
   <div class="hero">
     <img src="64412241-3B5F-42FD-9598-32881EB1A16E.jpeg" alt="Engine Drawing with Brown Background" />
-    <div class="hero-top-text">VinFix411.com</div>
+    <div class="hero-top-text">
+      <span class="site-name">VinFix411.com</span>
+      <span class="email">vinfix.lookup@gmail.com</span>
+    </div>
   </div>
 
   <div class="headline">
